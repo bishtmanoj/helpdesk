@@ -65,7 +65,7 @@ class TicketsController extends Controller {
 
         if ($siteCall = SiteCall::find($id))
             $siteCall->fill($formData)->save();
-        else
+        else 
             SiteCall::create($formData);
 
         $this->setFlash('success', trans($id?'ticketform.update_sucess':'ticketform.create_sucess'));

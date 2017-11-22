@@ -8,7 +8,7 @@ use App\User;
 class UsersController extends Controller {
 
     public function index() {
-        $this->data['users'] = User::paginate(5);
+        $this->data['users'] = User::role()->paginate(5);
         return $this->render('users.list');
     }
 

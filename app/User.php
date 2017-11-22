@@ -31,9 +31,9 @@ class User extends Authenticatable {
     public function hasPassword($password) {
         return Hash::check($password, $this->password);
     }
-    
-    public function tickets(){
-        return $this->hasMany();
+
+    public function scopeRole($query, $role = 'user') {
+        return $query->where('user_role', $role);
     }
 
 }
