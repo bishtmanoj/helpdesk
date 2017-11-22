@@ -31,7 +31,7 @@ class Language  {
             $segments = $request->segments();
             $segments[0] = $this->app->config->get('app.fallback_locale');
 
-            return $this->redirector->to(implode('/', $segments));
+//            return $this->redirector->to(implode('/', $segments));
         } 
         $locale = Session::put('locale',$locale);
         $this->app->setLocale(Session::get('locale'));

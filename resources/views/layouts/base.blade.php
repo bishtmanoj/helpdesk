@@ -18,7 +18,10 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="{{ url('/') }}" class="navbar-brand">{{ trans('main.site_name') }}</a>
+          <a href="{{ url('/') }}" class="navbar-brand">
+              <?php /*{{ trans('main.site_name') }}*/ ?>
+              <img class="img img-responsive" src="{{ asset('logo.png') }}" />
+          </a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
