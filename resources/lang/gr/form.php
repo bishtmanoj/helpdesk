@@ -15,7 +15,9 @@ return [
         'password' => 'Password',
         'password_confirmation' => 'Confirm Password',
         'name' => 'Name',
-        'remember' => 'Remember me'
+        'remember' => 'Remember me',
+        'cancel_button' => 'Cancel',
+        'password_change_checkbox' => 'Change Password'
     ],
     'action' => [
         'edit' => 'Edit',
@@ -28,6 +30,8 @@ return [
     'invalid_current_password' => 'Current password does not match',
     'signup' => 'Signup',
     'login' => 'Login',
+    'request_password' => 'Request password',
+    'reset_password' => 'Reset password',
     'account_not_exists' => 'Don\'t have an account',
     'account_exists' => 'Already have an account',
     'forgot_password' => 'Forgot Password',

@@ -12,6 +12,7 @@ return [
                             'title' => 'navigation.ticket.all',
                             'hasSub' => true,
                             'icon' => 'fa fa-ticket',
+                            'hidden' => ['ticket.edit'],
                             'subMenu' => [
                                 [
                                     'title' => 'navigation.ticket.open',
@@ -40,6 +41,7 @@ return [
                             'title' => 'navigation.department.all',
                             'hasSub' => true,
                             'icon' => 'fa fa-ticket',
+                            'hidden' => ['department.edit'],
                             'subMenu' => [
                                 [
                                     'title' => 'navigation.department.add',
@@ -57,6 +59,7 @@ return [
                             'title' => 'navigation.request.all',
                             'hasSub' => true,
                             'icon' => 'fa fa-ticket',
+                            'hidden' => ['request.edit'],
                             'subMenu' => [
                                 [
                                     'title' => 'navigation.request.add',
@@ -74,6 +77,7 @@ return [
                             'title' => 'navigation.device.all',
                             'hasSub' => true,
                             'icon' => 'fa fa-ticket',
+                            'hidden' => ['device.edit'],
                             'subMenu' => [
                                 [
                                     'title' => 'navigation.device.add',
@@ -97,6 +101,7 @@ return [
                             'title' => 'user.navbar.main',
                             'hasSub' => true,
                             'icon' => 'fa fa-user',
+                            'hidden' => ['users.edit'],
                             'subMenu' => [
                                 [
                                     'title' => 'user.navbar.all',

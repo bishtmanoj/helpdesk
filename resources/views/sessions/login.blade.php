@@ -2,12 +2,15 @@
 @section('pageTitle',trans('form.login'))
 @section('content')
 <div class="row">
-
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-12">
         @include('errors.flash')
+    </div>
+    <div class="col-md-6">
+
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">{{ trans('form.login') }}</h3>
+                <h3 class="box-title text-uppercase">{{ trans('user.existing_user.title') }}</h3>
+                <p>{{ trans('user.existing_user.text') }}</p>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -35,7 +38,7 @@
 
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-infow">{{ trans('form.forgot_password') }}</a>
+                        <a class="btn btn-infow" href="{{ route('password.request') }}">{{ trans('form.forgot_password') }}</a>
                     </div>
                 </div>
                 <!-- /.box-body -->
@@ -46,8 +49,24 @@
                 </div>
             </form>
         </div>
+        <?php /*
         <div class="help-block text-center">
             {{ trans('form.account_not_exists') }} <a href="{{ route('sessions.signup') }}">{{ trans('form.signup') }}</a>
+        </div>
+         * 
+         */ ?>
+    </div>
+    <div class="col-md-6">
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h3 class="box-title text-uppercase">{{ trans('user.not_existing_user.title') }}</h3>
+                <p>{{ trans('user.not_existing_user.text') }}</p>
+            </div>
+            <div class="box-body">
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">{{ trans('form.signup') }}</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

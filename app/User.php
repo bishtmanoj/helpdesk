@@ -36,4 +36,8 @@ class User extends Authenticatable {
         return $query->where('user_role', $role);
     }
 
+    public function calls() {
+        return $this->hasMany(SiteCall::class, 'call_user');
+    }
+
 }

@@ -63,6 +63,10 @@ Route::group(['middleware' => ['guest'], 'prefix' => \Session::get('locale')], f
     Route::get('login', 'SessionsController@login')->name('login');
     Route::post('/', 'SessionsController@store');
     Route::post('login', 'SessionsController@store');
+    Route::get('password/request', 'SessionsController@password_request')->name('password.request');
+    Route::post('password/request', 'SessionsController@send_reset_link');
+    Route::get('password/reset/{token}', 'SessionsController@reset_password')->name('reset_password');
+    Route::post('password/reset/{token}', 'SessionsController@update_password');
 
     Route::get('signup', 'RegistersController@signup')->name('sessions.signup');
 

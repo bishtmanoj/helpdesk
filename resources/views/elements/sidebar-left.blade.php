@@ -19,7 +19,7 @@
         <li class="header">{{ $sidebarGroup['title'] }}</li>
         @foreach($sidebarGroup['content'] as $sidebarMenu) 
         @if($sidebarMenu['hasSub'])
-        <li class="treeview {{ in_array(request()->route()->getName(), array_column($sidebarMenu['subMenu'],'route'))?'active':'' }}">
+        <li class="treeview {{ (in_array(request()->route()->getName(), array_column($sidebarMenu['subMenu'],'route')) || in_array(request()->route()->getName(),$sidebarMenu['hidden']))?'active':'' }}">
           <a href="#">
             <i class="fa {{ $sidebarMenu['icon'] }}"></i> <span>{{ trans($sidebarMenu['title']) }}</span>
             <span class="pull-right-container">

@@ -24,6 +24,7 @@
                 <div class="box-footer">
                     <div class="col-md-6 col-md-offset-3">
                         <button class="btn btn-primary" type="submit">{{ trans($content?'settings.department.update':'settings.department.add') }}</button>
+                   <a class="btn btn-default pull-right" href="{{ route('department.list') }}">{{ trans('form.field.cancel_button') }}</a>
                     </div>
                 </div>
             </div>

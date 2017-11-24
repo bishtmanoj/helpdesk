@@ -18,7 +18,7 @@
                             <th>{{ trans('form.field.name') }}</th>
                             <th>{{ trans('form.field.username') }}</th>
                             <th>{{ trans('form.field.email') }}</th>
-                            <!--<th width="120px">Action</th>-->
+                            <th width="120px">{{ trans('ticketform.action_title') }}</th>
                         </tr>
                         @foreach($users as $row)
                         <tr>
@@ -29,7 +29,7 @@
                             <td>{{ $row->user_name }}</td>
                             <td>{{ $row->user_login }}</td>
                             <td>{{ $row->user_email }}</td>
-                            <?php /*<td class="hide">
+                            <td>
                                 <form id="form-{{ $row->user_id}}" method="POST" action="{{ route('users.delete',[$row->user_id]) }}">
                                     {{ csrf_field() }}
                                 </form>
@@ -39,7 +39,7 @@
                                 <a title="{{ trans('form.action.delete') }}" onclick="$('#form-{{ $row->user_id }}').submit();" class="btn btn-sm btn-danger">
                                     <i class="fa fa-trash"></i>
                                 </a>
-                            </td>*/ ?>
+                            </td>
                         </tr>
                         <tr id="expand-{{$row->user_id}}" class="hide">
                             <td colspan="5">
